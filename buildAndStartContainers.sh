@@ -14,5 +14,5 @@ rm -rf /tmp/data
 
 docker run --name basic-postgres --rm -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e PGDATA=/var/lib/postgresql/data/pgdata -v /tmp/data:/var/lib/postgresql/data -p 5432:5432 -d postgres:14.1-alpine
 sleep 10
-docker run --name walletservice --network=easypaynet  -p 8080:8080 -e POSTGRES_HOST="${POSTGRES_CONTAINER_IP## }"  capstone-project/wallet:2.0
+docker run --name walletservice --network=easypaynet  -p 8080:8080 -e POSTGRES_HOST="${POSTGRES_CONTAINER_IP## }"  hatemhobbies/wallet:2.0
 
